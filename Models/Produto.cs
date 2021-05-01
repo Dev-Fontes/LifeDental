@@ -11,6 +11,6 @@ namespace LifeDental.Models
         public string Nome { get; set; }
         public int Quantidade { get; set; }
         public int Preco { get; set; }
-        public Categoria Categoria { get; set; }
+        public Categoria categoria { get; set; }
     }
 }

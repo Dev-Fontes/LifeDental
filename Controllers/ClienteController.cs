@@ -1,10 +1,7 @@
 ﻿using LifeDental.Data;
 using LifeDental.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using System;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace LifeDental.Controllers
 {
@@ -18,7 +15,7 @@ namespace LifeDental.Controllers
         }
         public IActionResult Index()
         {
-            var lista= _clienteContext.Clientes.ToList();
+            var lista = _clienteContext.Clientes.ToList();
              return View(lista);
         }
 

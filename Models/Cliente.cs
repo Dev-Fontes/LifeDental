@@ -13,5 +13,6 @@ namespace LifeDental.Models
         public string Cidade { get; set; }
         public string Estado { get; set; }
         public int Credito { get; set; }
+        public string Compra { get; set; }
     }
 }

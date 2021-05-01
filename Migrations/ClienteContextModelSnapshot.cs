@@ -29,6 +29,9 @@ namespace LifeDental.Migrations
                     b.Property<string>("Nome")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("teste")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.ToTable("Categorias");
@@ -42,6 +45,9 @@ namespace LifeDental.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Cidade")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Compra")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Credito")
@@ -61,35 +67,12 @@ namespace LifeDental.Migrations
                     b.ToTable("Clientes");
                 });
 
-            modelBuilder.Entity("LifeDental.Models.Documento", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int?>("ClienteId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Cpf")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ClienteId");
-
-                    b.ToTable("Documentos");
-                });
-
             modelBuilder.Entity("LifeDental.Models.Produto", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int?>("CategoriaId")
-                        .HasColumnType("int");
 
                     b.Property<string>("Nome")
                         .HasColumnType("nvarchar(max)");
@@ -100,29 +83,60 @@ namespace LifeDental.Migrations
                     b.Property<int>("Quantidade")
                         .HasColumnType("int");
 
+                    b.Property<int?>("categoriaId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("CategoriaId");
+                    b.HasIndex("categoriaId");
 
                     b.ToTable("Produtos");
                 });
 
-            modelBuilder.Entity("LifeDental.Models.Documento", b =>
+            modelBuilder.Entity("LifeDental.Models.Registro", b =>
                 {
-                    b.HasOne("LifeDental.Models.Cliente", "Cliente")
-                        .WithMany()
-                        .HasForeignKey("ClienteId");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Navigation("Cliente");
+                    b.Property<int?>("clienteId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("produtoId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("clienteId");
+
+                    b.HasIndex("produtoId");
+
+                    b.ToTable("Registros");
                 });
 
             modelBuilder.Entity("LifeDental.Models.Produto", b =>
                 {
-                    b.HasOne("LifeDental.Models.Categoria", "Categoria")
+                    b.HasOne("LifeDental.Models.Categoria", "categoria")
                         .WithMany()
-                        .HasForeignKey("CategoriaId");
+                        .HasForeignKey("categoriaId");
 
-                    b.Navigation("Categoria");
+                    b.Navigation("categoria");
+                });
+
+            modelBuilder.Entity("LifeDental.Models.Registro", b =>
+                {
+                    b.HasOne("LifeDental.Models.Cliente", "cliente")
+                        .WithMany()
+                        .HasForeignKey("clienteId");
+
+                    b.HasOne("LifeDental.Models.Produto", "produto")
+                        .WithMany()
+                        .HasForeignKey("produtoId");
+
+                    b.Navigation("cliente");
+
+                    b.Navigation("produto");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "WZUlB20NuwG/qt2qCTI+LzsKjMjnu9tdwa/LPQ7kR2uYl1bywb0OLeKjMMaKpp/MvnfnWgmt77H7SJkjglfc/A==",
+  "dgSpecHash": "7mP77FqBoa4B5G2wTFpfjsmOT+FlYXVmBAcrK5boVBzoHRx8qhyG3Wc5GwRMfqGDWDSHsT39hjuR/fW9dSdNCg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Poio\\source\\repos\\LifeDental\\LifeDental\\LifeDental.csproj",
   "expectedPackageFiles": [
@@ -24,8 +24,8 @@
     "C:\\Users\\Poio\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.5\\microsoft.entityframeworkcore.analyzers.5.0.5.nupkg.sha512",
     "C:\\Users\\Poio\\.nuget\\packages\\microsoft.entityframeworkcore.design\\5.0.5\\microsoft.entityframeworkcore.design.5.0.5.nupkg.sha512",
     "C:\\Users\\Poio\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\5.0.5\\microsoft.entityframeworkcore.relational.5.0.5.nupkg.sha512",
-    "C:\\Users\\Poio\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\5.0.5\\microsoft.entityframeworkcore.sqlserver.5.0.5.nupkg.sha512",
-    "C:\\Users\\Poio\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\5.0.5\\microsoft.entityframeworkcore.tools.5.0.5.nupkg.sha512",
+    "C:\\Users\\Poio\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\5.0.4\\microsoft.entityframeworkcore.sqlserver.5.0.4.nupkg.sha512",
+    "C:\\Users\\Poio\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\5.0.4\\microsoft.entityframeworkcore.tools.5.0.4.nupkg.sha512",
     "C:\\Users\\Poio\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\5.0.0\\microsoft.extensions.caching.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\Poio\\.nuget\\packages\\microsoft.extensions.caching.memory\\5.0.0\\microsoft.extensions.caching.memory.5.0.0.nupkg.sha512",
     "C:\\Users\\Poio\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",

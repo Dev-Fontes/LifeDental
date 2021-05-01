@@ -5,10 +5,13 @@ using System.Threading.Tasks;
 
 namespace LifeDental.Models
 {
-    public class Documento
+    public class Registro
     {
         public int Id { get; set; }
-        public Cliente Cliente { get; set; }
-        public string Cpf { get; set; }
+        public Cliente cliente { get; set; }
+        public Produto produto { get; set; }
+
+
     }
+
 }

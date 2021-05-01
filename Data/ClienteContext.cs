@@ -12,8 +12,9 @@ namespace LifeDental.Data
 
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
-        public DbSet<Documento> Documentos { get; set; }
+        public DbSet<Registro> Registros { get; set; }
         public DbSet<Produto> Produtos { get; set; }
+
 
        /* protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
